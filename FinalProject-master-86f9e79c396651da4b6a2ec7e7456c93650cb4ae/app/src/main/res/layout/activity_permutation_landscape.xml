@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PermutationActivity"
+    android:orientation="horizontal">
+
+    <TextView
+        android:id="@+id/label_A"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/data_rValue"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
+        android:background="@color/lightGray"
+        android:gravity="center"
+        android:padding="10dip"
+        android:text="@string/label_A"
+        android:textSize="16dip"
+        app:layout_constraintBottom_toTopOf="@+id/label_R"
+        app:layout_constraintEnd_toStartOf="@+id/data_aValue"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/data_aValue"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/label_R"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
+        android:gravity="center"
+        android:hint="@string/nValueHint"
+        android:inputType="numberDecimal"
+        android:textSize="16dip"
+        app:layout_constraintBottom_toTopOf="@+id/data_rValue"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/label_A"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/label_R"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/data_rValue"
+        android:layout_alignEnd="@+id/label_A"
+        android:layout_alignRight="@+id/label_A"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="8dp"
+        android:background="@color/lightGray"
+        android:gravity="center"
+        android:padding="10dip"
+        android:text="@string/label_R"
+        android:textSize="16dip"
+        app:layout_constraintBottom_toTopOf="@+id/repeats"
+        app:layout_constraintEnd_toStartOf="@+id/data_rValue"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/label_A" />
+
+    <EditText
+        android:id="@+id/data_rValue"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/button_forward"
+        android:layout_alignLeft="@+id/data_aValue"
+        android:layout_alignStart="@+id/data_aValue"
+        android:layout_marginEnd="32dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="12dp"
+        android:gravity="center"
+        android:hint="@string/kValueHint"
+        android:inputType="numberDecimal"
+        android:textSize="16dip"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/label_R"
+        app:layout_constraintTop_toBottomOf="@+id/data_aValue" />
+
+    <TextView
+        android:id="@+id/repeats"
+        android:layout_width="232dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginEnd="106dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="12dp"
+        android:gravity="center"
+        android:text="@string/repeats"
+        android:textSize="20dip"
+        app:layout_constraintEnd_toStartOf="@+id/yesButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/label_R" />
+
+    <RadioButton
+        android:id="@+id/yesButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="372dp"
+        android:layout_marginTop="12dp"
+        android:text="Yes"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/data_rValue" />
+
+    <RadioButton
+        android:id="@+id/noButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="64dp"
+        android:layout_marginTop="12dp"
+        android:text="No"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/data_rValue" />
+
+    <Button
+        android:id="@+id/button_forward"
+        android:layout_width="110dp"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/button"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="4dp"
+        android:layout_marginEnd="241dp"
+        android:layout_marginStart="241dp"
+        android:layout_marginTop="4dp"
+        android:onClick="calculatePermu"
+        android:text="@string/find"
+        app:layout_constraintBottom_toTopOf="@+id/red_line"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/repeats" />
+
+    <View
+        android:id="@+id/red_line"
+        android:layout_width="match_parent"
+        android:layout_height="7dp"
+        android:layout_below="@+id/button_forward"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="4dp"
+        android:background="#FF00"
+        app:layout_constraintBottom_toTopOf="@+id/button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_forward" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/button_forward"
+        android:layout_alignParentBottom="true"
+        android:layout_alignStart="@+id/button_forward"
+        android:layout_marginEnd="252dp"
+        android:layout_marginStart="252dp"
+        android:layout_marginTop="4dp"
+        android:onClick="goBack"
+        android:text="@string/returns"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/red_line" />
+
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">Counting</string>
+    <string name="button_combinations">Combinations</string>
+    <string name="button_permutations">Permutations</string>
+    <string name="label_N">No. Options</string>
+    <string name="label_A">No. Options</string>
+    <string name="nValueHint">Enter Integer</string>
+    <string name="label_K">No. Choices</string>
+    <string name="label_R">No. Choices</string>
+    <string name="kValueHint">Enter Integer</string>
+    <string name="label_Results">10</string>
+    <string name="find">Calculate</string>
+    <string name="combo_results">Calculator Has Found</string>
+    <string name="calculate">Combinations</string>
+    <string name="permutations">Permutations</string>
+    <string name="helpDescription">This calculator is used to count combinations and permutations.
+        Suppose you want to select a group of objects from a larger set, and that the order of the objects does not matter.
+        In this case use the Combinations calculator;
+        enter the size of the set under "No. Options" and number of objects under "No. Choices".
+        If the order of the objects does matter select Permutations.
+        Enter the size of the set under "No. Options" and the number of objects under "No. Choices".
+        If you can select the same object multiple times check yes under "Repetitions?" and if not select no.</string>
+    <string name="returns">Return</string>
+    <string name="done">Done</string>
+    <string name="repeats">Repetition?</string>
+</resources>
